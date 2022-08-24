@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 :root {
-  --colorBg: rgb(245, 238, 238);
+  --colorBg: rgb(36, 34, 34);
   --colorText: rgb(32, 31, 31);
-  --colorMain: #eb4b4b;
+  --colorMain: #3f4042;
   --fontMain: "Lato", sans-serif;
 }
 
@@ -30,14 +30,24 @@ header ul {
   list-style: none;
   gap: 2rem;
   width: 100%;
-  padding: 0.5rem 0.3rem;
+  padding: 0.7rem 0.5rem;
   justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header ul li {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+header ul li:hover {
+  color: #7da7f5;
 }
 
 .actors {
   padding: 1rem;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   color: #fff;
 }
@@ -46,7 +56,7 @@ header ul {
   background: var(--colorMain);
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 8px rgb(108, 108, 112);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   transition: 0.5s ease;
   cursor: pointer;
   position: relative;
@@ -54,7 +64,8 @@ header ul {
 }
 .actor-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 8px rgb(195, 195, 201);
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.5);
 }
 
 .modal {
@@ -65,9 +76,12 @@ header ul {
   width: 100%;
   height: 100%;
   z-index: 100;
-  display: none;
+  display: flex;
+  opacity: 0;
+  transition: 0.5s ease;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .modal section {
@@ -81,16 +95,37 @@ header ul {
   gap: 0.3rem;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 2rem 5rem;
 }
 
 .modal section .close {
   position: absolute;
   right: 0.5rem;
-  top: 0.3rem;
+  top: 0rem;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .modal-visible {
   display: flex;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+/* MOVIES */
+
+.PulpFiction {
+  background-color: rgb(128, 38, 38);
+}
+
+.Inception {
+  background-color: rgb(38, 44, 128);
+}
+
+.Goodfellas {
+  background-color: rgb(38, 128, 73);
+}
+
+.FightClub {
+  background-color: rgb(255, 115, 0);
 }
