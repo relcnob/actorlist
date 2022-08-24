@@ -1,0 +1,22 @@
+:root {
+  --colorBg: rgb(245, 238, 238);
+  --colorText: rgb(32, 31, 31);
+  --colorMain: #ffa58a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  font-family: var(--fontBody);
+  background: var(--colorBg);
+  overflow-x: hidden;
+}
